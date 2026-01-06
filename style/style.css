@@ -1,0 +1,80 @@
+*{box-sizing: border-box; margin: 0; padding: 0;}
+
+@font-face {
+    font-family: "Young Serif";
+    src: url(./fonts/young-serif/YoungSerif-Regular.ttf) format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Outfit";
+    src: url(./fonts/outfit/Outfit-VariableFont_wght.ttf) format("truetype");
+    font-weight: 400;
+}
+
+/* BODY */
+html, body{height: 100%;}
+body{background-color: var(--background);}
+
+
+/* VARIABLES */
+:root{
+    --background : hsl(30, 54%, 90%);
+    --text : hsl(30, 18%, 87%);
+    --span-text : hsl(30, 10%, 34%);
+    --h1 : hsl(24, 5%, 18%);
+    --h2 : hsl(14, 45%, 36%);
+    --h3 : hsl(332, 51%, 32%);
+    --background-card : hsl(330, 100%, 98%);
+    --font-p : 16px;
+    --font-title : "Young Serif";
+    --font-text : "Outfit";
+}
+
+p, li{font-family: var(--font-text);color: var(--span-text);}
+
+/* SECTION */
+main{margin: 300px;display: flex; justify-content: center;flex-direction: column;}
+.container{background-color:hsl(60, 61%, 100%); width:100%;border-radius: 20px;}
+.container article{margin:50px;}
+
+/* CARD */
+img{width: 100%;border-radius: 10px;}
+h1{margin: 10px;font-family: var(--font-title);color: var(--h1);}
+h2{font-family: var(--font-title);color: var(--h2);}
+.head-container p{margin: 10px;}
+li::marker{color: var(--h3);font-size: 20px;}
+
+/* Preparation time */
+.recipe-infos{background-color: var(--background-card);padding: 25px;line-height: 2.5;border-radius: 10px;}
+.recipe-infos p{color: var(--h3);}
+.list-info{margin-left: 30px;}
+
+/* ingredients */
+.ingredients{padding: 25px;line-height: 2.5;}
+
+/* Instructions */
+.instructions{padding: 25px;line-height: 2.5;}
+
+/* Nutrition */
+.nutrition h2{margin-bottom: 20px;}
+.wrapper{display: grid;grid-template-columns: 1fr 1fr;height: 50px;margin-top: 25px;
+}
+.value{color: var(--h2);font-weight: bold;}
+.separate{margin: 0 50px}
+hr{border: 1px solid var(--text);}
+
+/* Responsive tablet/mobile */
+@media (max-width: 990px) {
+
+    main{margin: 150px}
+}
+
+@media (max-width: 600px) {
+
+    main{margin: 0}
+    .container article{margin: 25px;}
+}
+
+/* FOOTER */
+footer{text-align: center;}
